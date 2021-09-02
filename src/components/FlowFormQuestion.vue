@@ -38,6 +38,8 @@
             <span class="f-help" v-else-if="question.type === QuestionType.MultipleChoice">{{ question.helpText || language.multipleChoiceHelpTextSingle }}</span>
           </span>
 
+          <div v-if="question.html" v-html="question.html" class="f-html" />
+
           <div v-if="!question.inline" class="f-answer f-full-width">
             <component
               ref="questionComponent"
