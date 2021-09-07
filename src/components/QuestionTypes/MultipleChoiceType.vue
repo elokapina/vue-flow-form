@@ -1,21 +1,24 @@
 <template>
   <div class="f-radios-wrap">
     <ul class="f-radios" v-bind:class="{'f-multiple': question.multiple}" role="listbox">
-      <li
-        v-for="(option, index) in question.options"
-        v-on:click.prevent="toggleAnswer(option)"
-        v-bind:class="{'f-selected': option.selected}"
-        v-bind:key="'m' + index"
-        v-bind:aria-label="getLabel(index)"
-        role="option"
-      >
-        <span class="f-image" v-if="hasImages && option.imageSrc">
-          <img v-bind:src="option.imageSrc" v-bind:alt="option.imageAlt">
-        </span>
-        <div class="f-label-wrap">
-          <span class="f-key">{{ getToggleKey(index) }}</span>
-          <span v-if="option.choiceLabel()" class="f-label">{{ option.choiceLabel() }}</span>
+      <li v-for="(option, index) in question.options"
+          v-bind:class="{'f-selected': option.selected}">
+        <div v-on:click.prevent="toggleAnswer(option)"
+          v-bind:key="'m' + index"
+          v-bind:aria-label="getLabel(index)"
+          role="option"
+          class="f-option">
+          <span class="f-image" v-if="hasImages && option.imageSrc">
+            <img v-bind:src="option.imageSrc" v-bind:alt="option.imageAlt">
+          </span>
+          <div class="f-label-wrap">
+            <span class="f-key">{{ getToggleKey(index) }}</span>
+            <span v-if="option.choiceLabel()" class="f-label">{{ option.choiceLabel() }}</span>
+          </div>
         </div>
+        <span v-if="option.onClickHelp"
+              v-on:click.prevent="option.onClickHelp()"
+              class="f-option-help">?</span>
       </li>
       <li
         class="f-other"

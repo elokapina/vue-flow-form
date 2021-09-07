@@ -644,8 +644,15 @@ header.vff-header svg.f-logo {
 }
 
 .vff ul.f-radios li {
-  padding: .6em .68em;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   margin: .5em 0 .6em;
+}
+
+.vff ul.f-radios li div.f-option,
+.vff ul.f-radios li span.f-option-help {
+  padding: .6em .68em;
   font-weight: 300;
   line-height: 1.24;
   cursor: default;
@@ -677,19 +684,29 @@ header.vff-header svg.f-logo {
   font-size: .4em;
 }
 
-.vff ul.f-radios li div.f-label-wrap{
+.vff ul.f-radios li div.f-option {
+  flex-grow: 1
+}
+
+.vff ul.f-radios li div.f-option div.f-label-wrap {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-.vff ul.f-radios li span.f-label {
+.vff ul.f-radios li div.f-option span.f-label {
   margin-left: .4em;
 }
 
-.vff ul.f-radios li span.f-key {
+.vff ul.f-radios li div.f-option span.f-key {
   width: 16px;
   text-align: center;
+}
+
+.vff ul.f-radios li span.f-option-help {
+  width: 40px;
+  text-align: center;
+  border-left: 1px solid;
 }
 
 /*

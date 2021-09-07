@@ -279,16 +279,21 @@ header.vff-header svg.f-logo{
   }
 
   /*field-multiplechoice*/
-  .vff ul.f-radios li.f-selected{
+  .vff ul.f-radios li.f-selected div.f-option{
     color: var(--vff-main-accent-color);
   }
 
-  .vff ul.f-radios li{
+  .vff ul.f-radios li div.f-option {
     font-weight: 900;
     color: var(--vff-secondary-text-color);
   }
 
-  .vff .f-key{
+  .vff ul.f-radios li span.f-option-help {
+    border-color: var(--vff-secondary-text-color);
+  }
+
+  .vff .f-key,
+  .vff ul.f-radios li span.f-option-help {
     font-weight: 400;
     color: var(--vff-main-accent-color);
   }
