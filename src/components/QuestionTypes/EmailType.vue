@@ -19,7 +19,7 @@
     methods: {
       validate() {
         if (this.hasValue) {
-          return /^[^@]+@.+[^.]$/.test(this.dataValue)
+          return /^[^@]+@.*[^.]\..*[^.]$/.test(this.dataValue)
         }
 
         return !this.question.required
