@@ -132,10 +132,15 @@
       },
 
       getToggleKey(index) {
-        const key = 65 + index
+        const firstLetterIndex = Math.floor(index/(90-65+1))
 
-        if (key <= 90) {
+        if (firstLetterIndex === 0) {
+          const key = 65 + index
           return String.fromCharCode(key)
+        } else {
+          const firstLetterKey = 65 + firstLetterIndex - 1
+          const key = (65 + index)  - (firstLetterIndex * (90-65+1))
+          return String.fromCharCode(firstLetterKey) + String.fromCharCode(key)
         }
 
         return ''
