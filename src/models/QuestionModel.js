@@ -12,6 +12,7 @@ export const QuestionType = Object.freeze({
   Email: 'FlowFormEmailType',
   File: 'FlowFormFileType',
   LongText: 'FlowFormLongTextType',
+  MatrixId: 'FlowFormMatrixIdType',
   MultipleChoice: 'FlowFormMultipleChoiceType',
   MultiplePictureChoice: 'FlowFormMultiplePictureChoiceType',
   Number: 'FlowFormNumberType',
