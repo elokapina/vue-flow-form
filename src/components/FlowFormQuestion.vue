@@ -105,6 +105,7 @@
   import FlowFormDropdownType from './QuestionTypes/DropdownType.vue'
   import FlowFormEmailType from './QuestionTypes/EmailType.vue'
   import FlowFormLongTextType from './QuestionTypes/LongTextType.vue'
+  import FlowFormMatrixIdType from './QuestionTypes/MatrixIdType.vue'
   import FlowFormMultipleChoiceType from './QuestionTypes/MultipleChoiceType.vue'
   import FlowFormMultiplePictureChoiceType from './QuestionTypes/MultiplePictureChoiceType.vue'
   import FlowFormNumberType from './QuestionTypes/NumberType.vue'
@@ -126,6 +127,7 @@
       FlowFormDropdownType,
       FlowFormEmailType,
       FlowFormLongTextType,
+      FlowFormMatrixIdType,
       FlowFormMultipleChoiceType,
       FlowFormMultiplePictureChoiceType,
       FlowFormNumberType,
